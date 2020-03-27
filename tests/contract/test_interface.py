@@ -3,8 +3,8 @@
 import json
 
 import boto3
-import pytest
 
+import pytest
 from rpdk.core.contract.interface import Action, HandlerErrorCode, OperationStatus
 
 

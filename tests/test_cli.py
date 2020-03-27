@@ -2,7 +2,6 @@ import logging
 from unittest.mock import patch
 
 import pytest
-
 from rpdk.core import __version__
 from rpdk.core.cli import EXIT_UNHANDLED_EXCEPTION, main, setup_logging
 from rpdk.core.exceptions import DownstreamError, SysExitRecommendedError

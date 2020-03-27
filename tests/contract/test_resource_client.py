@@ -4,7 +4,6 @@ from io import StringIO
 from unittest.mock import ANY, patch
 
 import pytest
-
 from rpdk.core.boto_helpers import LOWER_CAMEL_CRED_KEYS
 from rpdk.core.contract.interface import Action, HandlerErrorCode, OperationStatus
 from rpdk.core.contract.resource_client import (

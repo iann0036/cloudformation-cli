@@ -6,9 +6,9 @@ from pathlib import Path
 from unittest.mock import ANY, Mock, patch
 from urllib.parse import urlsplit
 
-import pytest
 from botocore.exceptions import ClientError, WaiterError
 
+import pytest
 from rpdk.core.exceptions import (
     DownstreamError,
     InternalError,

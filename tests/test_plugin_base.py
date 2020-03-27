@@ -3,7 +3,6 @@
 from unittest.mock import call, patch
 
 import pytest
-
 from rpdk.core.filters import FILTER_REGISTRY
 from rpdk.core.plugin_base import LanguagePlugin, __name__ as plugin_base_name
 

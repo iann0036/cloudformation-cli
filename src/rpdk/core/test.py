@@ -9,10 +9,10 @@ from contextlib import contextmanager
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 
-import pytest
 from jsonschema import Draft6Validator
 from jsonschema.exceptions import ValidationError
 
+import pytest
 from rpdk.core.jsonutils.pointer import fragment_decode
 
 from .contract.contract_plugin import ContractPlugin

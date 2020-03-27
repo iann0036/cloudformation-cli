@@ -2,7 +2,6 @@ from pathlib import Path
 from unittest.mock import ANY, Mock, PropertyMock, patch
 
 import pytest
-
 from rpdk.core.exceptions import WizardAbortError, WizardValidationError
 from rpdk.core.init import (
     ValidatePluginChoice,

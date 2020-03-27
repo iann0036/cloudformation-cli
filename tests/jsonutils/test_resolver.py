@@ -1,6 +1,5 @@
 # pylint: disable=protected-access,redefined-outer-name
 import pytest
-
 from rpdk.core.exceptions import ModelResolverError
 from rpdk.core.jsonutils.resolver import (
     UNDEFINED,
@@ -33,6 +32,30 @@ def test_modelresolver_empty_ref_path_results_in_model_name():
 def test_modelresolver_duplicate_model_name():
     flattened = {
         (): {"properties": {"ResourceModel": {"type": "object"}}},
+        ("properties", "ResourceModel"): {"type": "object"},
+    }
+    resolver = ModelResolver(flattened)
+    assert resolver._models == {
+        ('properties', 'ResourceModel2'): "ResourceModel",
+        (): "ResourceModel",
+    }
+
+
+def test_modelresolver_too_many_duplicate_model_names():
+    flattened = {
+        (): {
+            "properties": {
+                "ResourceModel": {"type": "object"},
+                "ResourceModel2": {"type": "object"},
+                "ResourceModel3": {"type": "object"},
+                "ResourceModel4": {"type": "object"},
+                "ResourceModel5": {"type": "object"},
+                "ResourceModel6": {"type": "object"},
+                "ResourceModel7": {"type": "object"},
+                "ResourceModel8": {"type": "object"},
+                "ResourceModel9": {"type": "object"},
+            },
+        },
         ("properties", "ResourceModel"): {"type": "object"},
     }
     with pytest.raises(ModelResolverError) as excinfo:

@@ -1,9 +1,9 @@
 from unittest.mock import ANY, create_autospec, patch
 
-import pytest
 from boto3 import Session
 from botocore.exceptions import ClientError
 
+import pytest
 from rpdk.core.boto_helpers import (
     BOTO_CRED_KEYS,
     LOWER_CAMEL_CRED_KEYS,

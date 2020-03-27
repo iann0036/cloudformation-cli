@@ -9,11 +9,11 @@ from subprocess import check_output
 from unittest.mock import ANY, create_autospec, patch
 
 import jsonschema
-import pytest
 import yaml
 from jsonschema.exceptions import RefResolutionError, ValidationError
-from pytest_localserver.http import Request, Response, WSGIServer
 
+import pytest
+from pytest_localserver.http import Request, Response, WSGIServer
 from rpdk.core.data_loaders import (
     STDIN_NAME,
     get_file_base_uri,

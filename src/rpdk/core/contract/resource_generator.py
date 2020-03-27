@@ -1,6 +1,8 @@
 import logging
 from collections.abc import Sequence
 
+from jsonschema import RefResolver
+
 from hypothesis.strategies import (
     booleans,
     builds,
@@ -16,7 +18,6 @@ from hypothesis.strategies import (
     text,
     tuples,
 )
-from jsonschema import RefResolver
 
 from ..jsonutils.utils import schema_merge
 

@@ -5,7 +5,6 @@ from io import StringIO
 from unittest.mock import Mock, patch
 
 import pytest
-
 from rpdk.core.cli import main
 from rpdk.core.contract.interface import Action
 from rpdk.core.invoke import _needs_reinvocation

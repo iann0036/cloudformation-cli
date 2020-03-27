@@ -6,7 +6,6 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 import pytest
-
 from rpdk.core.cli import EXIT_UNHANDLED_EXCEPTION, main
 from rpdk.core.contract.interface import Action
 from rpdk.core.project import Project

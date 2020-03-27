@@ -1,7 +1,6 @@
 from unittest.mock import Mock, patch
 
 import pytest
-
 from rpdk.core.cli import EXIT_UNHANDLED_EXCEPTION, main
 from rpdk.core.project import Project
 

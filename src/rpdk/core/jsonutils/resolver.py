@@ -57,13 +57,19 @@ class ModelResolver:
         if ref_path == ():
             return self._base_model_name
 
+        class_name_iterator = 1  # deliberate; 2 means second model of same name
+
         class_name = base_class_from_ref(ref_path)
-        try:
-            dupe_path = next(
-                path for path, name in self._models.items() if name == class_name
-            )
-        except StopIteration:
-            return class_name
+
+        while class_name_iterator < 99:
+            try:
+                dupe_path = next(
+                    path for path, name in self._models.items() if name == class_name
+                )
+            except StopIteration:
+                return class_name
+            class_name_iterator += 1
+            class_name = base_class_from_ref(ref_path) + str(class_name_iterator)
 
         raise ModelResolverError(
             "Model name conflict. "

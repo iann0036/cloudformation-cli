@@ -1,5 +1,4 @@
 import pytest
-
 from rpdk.core.jsonutils.utils import NON_MERGABLE_KEYS, ConstraintError, schema_merge
 
 A = "VVNEON"

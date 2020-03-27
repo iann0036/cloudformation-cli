@@ -3,7 +3,6 @@ from collections.abc import Sequence
 from math import isnan
 
 import pytest
-
 from rpdk.core.contract.resource_generator import (
     NEG_INF,
     POS_INF,

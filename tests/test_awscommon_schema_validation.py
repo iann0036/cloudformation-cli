@@ -3,9 +3,9 @@
 import json
 from pathlib import Path
 
-import pytest
 from jsonschema.exceptions import ValidationError
 
+import pytest
 from rpdk.core.data_loaders import make_validator
 
 

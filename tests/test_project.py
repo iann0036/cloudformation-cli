@@ -10,10 +10,10 @@ from io import StringIO
 from pathlib import Path
 from unittest.mock import ANY, MagicMock, patch
 
-import pytest
 import yaml
 from botocore.exceptions import ClientError, WaiterError
 
+import pytest
 from rpdk.core.data_loaders import resource_json
 from rpdk.core.exceptions import (
     DownstreamError,
